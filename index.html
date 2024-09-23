@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website with Slider</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Slick Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section with Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Website_4_Task</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#slider">Slider</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dropdown">Dropdown</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#list-box">List Box</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#d-form">D-Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#client-form">Client Form</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#login-form">Login Form</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slick Slider Section -->
+    <div class="slider" id="slider">
+      <div>
+        <img src="images/slider-1.jpg" alt="Image 1" />
+      </div>
+      <div>
+        <img src="images/slider-2.jpeg" alt="Image 2" />
+      </div>
+      <div>
+        <img src="images/slider-3.jpg" alt="Image 3" />
+      </div>
+      <div>
+        <img src="images/slider-4.jpg" alt="Image 4" />
+      </div>
+      <div>
+        <img src="images/slider-5.jpg" alt="Image 5" />
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="content">
+      <div class="container">
+        <h2 class="text-center">Welcome to My Website</h2>
+        <p class="text-center">
+          This is a simple responsive website layout with a header, content, and
+          footer.<br />
+          Resize the browser window to see how the layout adapts to different
+          screen sizes.
+        </p>
+      </div>
+    </main>
+
+    <!-- Dropdown Section -->
+    <section class="site-selection mt-5" id="dropdown">
+      <div class="container text-center">
+        <h2>II - Select a Site to Visit</h2>
+        <div class="form-group">
+          <select id="site-select" class="form-control w-50 mx-auto">
+            <option value="">Select a site</option>
+            <option value="https://www.google.com">Google</option>
+            <option value="https://www.facebook.com">Facebook</option>
+            <option value="https://www.twitter.com">Twitter</option>
+            <option value="https://www.github.com">GitHub</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- List Box Section -->
+    <section class="list-box-section mt-5 mb-5" id="list-box">
+      <div class="container text-center">
+        <h2 class="mb-3">III - List Box</h2>
+        <div class="row text-center">
+          <!-- List 1 -->
+          <div class="col-md-6">
+            <h5>List 1</h5>
+            <select id="list1" class="form-control list-box" multiple>
+              <option value="item1">Item 1</option>
+              <option value="item2">Item 2</option>
+              <option value="item3">Item 3</option>
+              <option value="item4">Item 4</option>
+              <option value="item5">Item 5</option>
+            </select>
+          </div>
+
+          <!-- Buttons -->
+
+          <!-- List 2 -->
+          <div class="col-md-6">
+            <h5>List 2</h5>
+            <select id="list2" class="form-control list-box" multiple>
+              <!-- Initially empty -->
+            </select>
+          </div>
+          <div class="col-md-12 button-group">
+            <div class="row">
+              <button id="add-btn" class="btn btn-primary">Add</button>
+              <button id="add-all-btn" class="btn btn-success">Add All</button>
+              <button id="add-multiple-btn" class="btn btn-warning">
+                Add Multiple
+              </button>
+              <button id="reset-btn" class="btn btn-danger">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="d-form">
+      <div class="contaner mb-5">
+        <div class="row">
+          <div class="container mt-5">
+            <h2 class="text-center mb-4">
+              IV- Dynamic Form with Multiple Submit Buttons
+            </h2>
+
+            <!-- Form -->
+            <form id="myForm" method="post">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Enter name"
+                  required
+                />
+              </div>
+              <!-- <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                      </div> -->
+
+              <!-- Submit Buttons -->
+              <div class="form-group">
+                <button type="submit" id="save-btn" class="btn btn-primary">
+                  Save
+                </button>
+                <button type="submit" id="view-btn" class="btn btn-secondary">
+                  View
+                </button>
+                <button type="submit" id="edit-btn" class="btn btn-success">
+                  Edit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-selection" id="client-form">
+      <div class="container mt-5 mb-5">
+        <h2 class="text-center mb-4">V - Registration Form with Validations</h2>
+
+        <!-- Registration Form -->
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              name="firstname"
+              placeholder="Enter first name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastname"
+              name="lastname"
+              placeholder="Enter last name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Enter 10-digit phone number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="country">Address:</label>
+            <input
+              type="textbox"
+              class="form-control"
+              id="address"
+              name="address"
+              placeholder="Enter Address"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <select class="form-control" id="nationality" name="nationality">
+              <option value="">Select Nationality</option>
+              <option value="American">American</option>
+              <option value="Canadian">Canadian</option>
+              <option value="British">British</option>
+              <option value="Indian">Indian</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Gender:</label><br />
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+          </div>
+
+          <div class="form-group">
+            <label>Hobbies:</label><br />
+            <input
+              type="checkbox"
+              id="reading"
+              name="hobbies"
+              value="Reading"
+            />
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="sports" name="hobbies" value="Sports" />
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="hobbies" value="Music" />
+            <label for="music">Music</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="mb-5" id="login-form">
+      <div class="container mt-5">
+        <!-- Container for Login Form -->
+        <div class="login-container">
+          <h3 class="text-center">Login Form</h3>
+          <!-- The login form will be inserted here -->
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="main-footer">
+      <div class="container">
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Slick Slider JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- jQuery and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="script.js"></script>
+    <script src="login-form.js"></script>
+  </body>
+</html>
