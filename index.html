@@ -289,20 +289,46 @@
         </form>
       </div>
     </section>
+    <div class="formAlign">
+      <section id="dataStorageFrom" class="dataStorageFrom mb-5">
+        <div class="container mt-5">
+          <h3 class="text-center">VI - Save Form Data to Local Storage</h3>
 
-    <section class="mb-5" id="login-form">
-      <div class="container mt-5">
-        <!-- Container for Login Form -->
-        <div class="login-container">
-          <h3 class="text-center">VII - Login Form</h3>
-          <!-- The login form will be inserted here -->
+          <div class="row">
+            <form id="dataForm">
+              <label for="name">Name:</label>
+              <input type="text" id="localUsername" name="name" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="localEmail" name="email" required />
+
+              <label for="password">Password:</label>
+              <input type="text" id="localPassword" name="password" required />
+
+              <button type="submit" onclick="test()">Sumbit</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="mb-5" id="login-form">
+        <div class="container mt-5">
+          <!-- Container for Login Form -->
+          <div class="login-container">
+            <h3 class="text-center">VII - Login Form</h3>
+            <!-- The login form will be inserted here -->
+
+            <form id="dynamicForm"></form>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <!-- Footer Section -->
     <footer class="main-footer">
       <div class="container">
-        <p>&copy; 2024 My Website For Internal JS Tasks. All rights reserved.</p>
+        <p>
+          &copy; 2024 My Website For Internal JS Tasks. All rights reserved.
+        </p>
       </div>
     </footer>
 

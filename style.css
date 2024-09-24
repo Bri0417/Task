@@ -133,7 +133,82 @@ body {
 .login-container .btn-primary {
   width: 200px;
 }
+#dynamicForm input {
+  width: 500px;
+  display: block;
+  margin-bottom: 20px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
 
+#dynamicForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#dynamicForm button {
+  width: 200px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  outline: none;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 6px 0px;
+}
+
+.dataStorageFrom form {
+  margin-bottom: 20px;
+}
+.dataStorageFrom form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+.dataStorageFrom form input[type="text"],
+.dataStorageFrom form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.dataStorageFrom form button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.dataStorageFrom .output {
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #ced4da;
+  height: 160px;
+  width: 250px;
+}
+
+.dataStorageFrom .row {
+  justify-content: center;
+  gap: 30px;
+}
+
+.formAlign {
+  background: linear-gradient(90deg, #e2e2e2 50%, transparent 20%);
+  display: flex;
+  justify-content: space-around;
+}
 /* Responsive design */
 @media (max-width: 768px) {
   .main-header nav ul {

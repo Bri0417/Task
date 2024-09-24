@@ -1,173 +1,48 @@
-// // Function to dynamically create the login form inside the container
+var dform = document.getElementById("dynamicForm");
+// dform.setAttribute("style", "display:flex;flex-direction:column")
 
-// function createLoginForm() {
-//     // Select the container where the form will be placed
-//     let loginContainer = document.querySelector('.login-container');
+// dform.innerHTML=""
+var userName = document.createElement("input");
+userName.setAttribute("placeholder", "Name");
+dform.appendChild(userName);
+var userEmail = document.createElement("input");
+userEmail.setAttribute("placeholder", "Email");
+userEmail.setAttribute("type", "email");
+dform.appendChild(userEmail);
+// Create the submit button
+var sButton = document.createElement("button");
+sButton.setAttribute("type", "submit");
+sButton.textContent = "Submit";
+// Append the button to the form
+dform.appendChild(sButton);
 
-//     // Create the form element
-//     let form = document.createElement('form');
-//     form.setAttribute('id', 'loginForm');
-//     form.setAttribute('onsubmit', 'return validateLoginForm()');
+function test() {
+  // Function to load stored data from local storage
+  // Retrieing data
+  var uid = document.getElementById("localUsername").value;
+  var email = document.getElementById("localEmail").value;
+  var pw = document.getElementById("localPassword").value;
 
-//     // Username field
-//     let usernameLabel = document.createElement('label');
-//     usernameLabel.setAttribute('for', 'username');
-//     usernameLabel.innerText = 'Username:';
-//     form.appendChild(usernameLabel);
+  // Storing Data
 
-//     let usernameInput = document.createElement('input');
-//     usernameInput.setAttribute('type', 'text');
-//     usernameInput.setAttribute('id', 'username');
-//     usernameInput.setAttribute('name', 'username');
-//     usernameInput.setAttribute('placeholder', 'Enter your username');
-//     form.appendChild(usernameInput);
+  var user = localStorage.setItem("uid", uid);
+  var em = localStorage.setItem("email", email);
+  var pass = localStorage.setItem("pw", pw);
 
-//     // Password field
-//     let passwordLabel = document.createElement('label');
-//     passwordLabel.setAttribute('for', 'password');
-//     passwordLabel.innerText = 'Password:';
-//     form.appendChild(passwordLabel);
+  // Retrieing stored data
 
-//     let passwordInput = document.createElement('input');
-//     passwordInput.setAttribute('type', 'password');
-//     passwordInput.setAttribute('id', 'password');
-//     passwordInput.setAttribute('name', 'password');
-//     passwordInput.setAttribute('placeholder', 'Enter your password');
-//     form.appendChild(passwordInput);
+  var user = localStorage.getItem("uid", uid);
+  var em = localStorage.getItem("email", email);
+  var pass = localStorage.getItem("pw", pw);
 
-//     // Submit button
-//     let submitButton = document.createElement('button');
-//     submitButton.setAttribute('type', 'submit');
-//     submitButton.innerText = 'Login';
-//     form.appendChild(submitButton);
+  var a, b, c;
+  a = "Brindha";
+  b = "brindha@gmail.com";
+  c = 123456;
 
-//     // Append form to the container
-//     loginContainer.appendChild(form);
-// }
-
-// // Form validation function
-// function validateLoginForm() {
-//     let username = document.getElementById('username').value;
-//     let password = document.getElementById('password').value;
-//     let valid = true;
-
-//     // Clear previous errors
-//     document.querySelectorAll('.error').forEach(function (error) {
-//         error.remove();
-//     });
-
-//     // Username validation
-//     if (username === '') {
-//         let error = document.createElement('div');
-//         error.className = 'error';
-//         error.innerText = 'Username is required';
-//         document.getElementById('username').after(error);
-//         valid = false;
-//     }
-
-//     // Password validation
-//     if (password === '') {
-//         let error = document.createElement('div');
-//         error.className = 'error';
-//         error.innerText = 'Password is required';
-//         document.getElementById('password').after(error);
-//         valid = false;
-//     }
-
-//     return valid; // Return true if valid, false otherwise
-// }
-
-// // Create the login form when the page loads
-// window.onload = createLoginForm;
-
-// Function to dynamically create the login form inside the container using Bootstrap classes
-function createLoginForm() {
-  // Select the container where the form will be placed
-  let loginContainer = document.querySelector(".login-container");
-
-  // Create the form element
-  let form = document.createElement("form");
-  form.setAttribute("id", "loginForm");
-  form.setAttribute("onsubmit", "return validateLoginForm()");
-
-  // Form Group for Username
-  let formGroupUsername = document.createElement("div");
-  formGroupUsername.className = "form-group";
-
-  let usernameLabel = document.createElement("label");
-  usernameLabel.setAttribute("for", "username");
-  usernameLabel.innerText = "Username:";
-  formGroupUsername.appendChild(usernameLabel);
-
-  let usernameInput = document.createElement("input");
-  usernameInput.setAttribute("type", "text");
-  usernameInput.setAttribute("id", "username");
-  usernameInput.setAttribute("name", "username");
-  usernameInput.setAttribute("placeholder", "Enter your username");
-  usernameInput.className = "form-control";
-  formGroupUsername.appendChild(usernameInput);
-  form.appendChild(formGroupUsername);
-
-  // Form Group for Password
-  let formGroupPassword = document.createElement("div");
-  formGroupPassword.className = "form-group";
-
-  let passwordLabel = document.createElement("label");
-  passwordLabel.setAttribute("for", "password");
-  passwordLabel.innerText = "Password:";
-  formGroupPassword.appendChild(passwordLabel);
-
-  let passwordInput = document.createElement("input");
-  passwordInput.setAttribute("type", "password");
-  passwordInput.setAttribute("id", "password");
-  passwordInput.setAttribute("name", "password");
-  passwordInput.setAttribute("placeholder", "Enter your password");
-  passwordInput.className = "form-control";
-  formGroupPassword.appendChild(passwordInput);
-  form.appendChild(formGroupPassword);
-
-  // Submit Button
-  let submitButton = document.createElement("button");
-  submitButton.setAttribute("type", "submit");
-  submitButton.innerText = "Login";
-  submitButton.className = "btn btn-primary btn-block";
-  form.appendChild(submitButton);
-
-  // Append form to the container
-  loginContainer.appendChild(form);
-}
-
-// Form validation function
-function validateLoginForm() {
-  let username = document.getElementById("username").value;
-  let password = document.getElementById("password").value;
-  let valid = true;
-
-  // Clear previous errors
-  document.querySelectorAll(".error").forEach(function (error) {
-    error.remove();
-  });
-
-  // Username validation
-  if (username === "") {
-    let error = document.createElement("div");
-    error.className = "error text-danger";
-    error.innerText = "Username is required";
-    document.getElementById("username").after(error);
-    valid = false;
+  if (a == user && b == em && c == pass) {
+    alert("Login Successfull !");
+  } else {
+    alert("Invalid Details !!");
   }
-
-  // Password validation
-  if (password === "") {
-    let error = document.createElement("div");
-    error.className = "error text-danger";
-    error.innerText = "Password is required";
-    document.getElementById("password").after(error);
-    valid = false;
-  }
-
-  return valid; // Return true if valid, false otherwise
 }
-
-// Create the login form when the page loads
-window.onload = createLoginForm;

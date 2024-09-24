@@ -1,14 +1,4 @@
 $(document).ready(function () {
-  //   $('.slider').slick({
-  //     dots: true,
-  //     infinite: true,
-  //     speed: 500,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     autoplay: true,
-  //     autoplaySpeed: 2000,
-
-  //   });
   $(".slider").slick({
     infinite: true,
     autoplay: false,
@@ -115,18 +105,22 @@ function validateForm() {
     alert("Please enter a valid email address.");
     valid = false;
   }
-  // if (!validation.isNotEmpty(nationality)) {
-  //     alert("Please select a nationality.");
-  //     valid = false;
-  // }
-  // if (!gender) {
-  //     alert("Please select a gender.");
-  //     valid = false;
-  // }
-  // if (hobbies.length === 0) {
-  //     alert("Please select at least one hobby.");
-  //     valid = false;
-  // }
+  if (!validation.isNotEmpty(address)) {
+    alert("Address is required.");
+    valid = false;
+  }
+  if (!validation.isNotEmpty(nationality)) {
+    alert("Please select a nationality.");
+    valid = false;
+  }
+  if (!gender) {
+    alert("Please select a gender.");
+    valid = false;
+  }
+  if (hobbies.length === 0) {
+    alert("Please select at least one hobby.");
+    valid = false;
+  }
 
   return valid;
 }
